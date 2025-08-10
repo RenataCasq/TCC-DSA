@@ -134,7 +134,7 @@ ax2.tick_params(axis='y', labelcolor=cor_linha)
 for i, v in enumerate(df_vendas['Valor R$']):
     ax2.text(i, v + v*0.02, f'R$ {int(v):,}', ha='center', color=cor_linha, fontsize=10, fontweight='bold')
 
-# 🔧 Título e grid
+# Título e grid
 plt.title('Comparação de Vendas – Quantidade de Peças (Barras) e Valor em R$ (Linha)', fontsize=13, weight='bold')
 ax1.grid(axis='y', linestyle='--', alpha=0.7)
 
@@ -157,7 +157,7 @@ ax = sns.barplot(data=df_ref, x='Ano', y='Qtd de Refs', color='#4C72B0')
 # Título
 plt.title('Quantidade de Referências Disponíveis para Vendas por Ano')
 
-# 🔥 Adicionar os rótulos de valor em cima de cada barra
+# Adicionar os rótulos de valor em cima de cada barra
 for i, v in enumerate(df_ref['Qtd de Refs']):
     ax.text(i, v + v * 0.02,  # posição: eixo x = i, eixo y = levemente acima do topo da barra
             str(v),            # o valor que será mostrado
@@ -501,4 +501,5 @@ previsao_2024 = base_previsao[['Referência']].copy()
 previsao_2024['Previsão Qtde Venda'] = y_pred_2024.round(0).astype(int)
 
 print(previsao_2024)
+
 
